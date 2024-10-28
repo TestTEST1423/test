@@ -43,7 +43,7 @@ jobs:
 
       - name: Cancel Workflow
         if: env.SKIP_RELEASE != 'true'
-        uses: styfle/cancel-workflow-action@0.10.0
+        run: exit 78
       
       # Create a new Git tag with the calculated version
       - name: Create Git Tag

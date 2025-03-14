@@ -4,7 +4,7 @@ permissions: write-all
 on:
   workflow_call:
     inputs:
-      node-version:
+      dotNet-version:
         required: false
         type: string
         default: "8"

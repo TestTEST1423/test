@@ -1,0 +1,13 @@
+name: check for warnings
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  Check-for-warnings:
+    runs-on: ubuntu-latest
+    steps:
+    - name: check for warnings
+      run: |
+        echo "check for warnings"

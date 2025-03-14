@@ -2,6 +2,10 @@ name: Deployment pipeline
 permissions: write-all
 
 on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:

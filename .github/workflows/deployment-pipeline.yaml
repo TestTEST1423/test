@@ -1,0 +1,14 @@
+name: Deployment pipeline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-tag:
+    uses: ./.github/workflows/create-tag.yaml
+
+  create-release:
+    needs: create-tag
+    uses: ./.github/workflows/create-release.yaml
+    with:
+      dotnet-version: "9"

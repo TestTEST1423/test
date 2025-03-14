@@ -2,7 +2,8 @@ name: Create tag on PR Merge
 permissions: write-all
 
 on:
-  workflow_dispatch:
+  workflow_call:
+#  workflow_dispatch:
 
 jobs:
   fetch-labels-and-create-tag:

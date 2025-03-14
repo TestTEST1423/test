@@ -1,0 +1,15 @@
+name: Deployment pipeline
+permissions: write-all
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    uses: ./.github/workflows/build-and-test.yaml
+
+  check-for-warnings:
+    uses: ./.github/workflows/check-for-warnings.yaml

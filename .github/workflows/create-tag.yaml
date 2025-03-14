@@ -27,7 +27,7 @@ jobs:
       - name: Calculate next version
         run: |
           # Initizalise skip release
-          echo "SKIP_RELEASE=true" >> $GITHUB_ENV
+          echo "SKIP_RELEASE=false" >> $GITHUB_ENV
           
           # Extract major, minor, patch from the latest tag (strip leading 'v')
           VERSION=${LATEST_TAG#v}

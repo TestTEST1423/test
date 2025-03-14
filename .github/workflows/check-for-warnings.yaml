@@ -1,8 +1,7 @@
 name: check for warnings
 
 on:
-  pull_request:
-    branches: [ main ]
+  workflow_call:
 
 jobs:
   Check-for-warnings:

@@ -27,7 +27,7 @@ jobs:
       - name: Calculate next version
         run: |
           # Initizalise skip release
-          echo "SKIP_RELEASE=true" >> $GITHUB_ENV
+          echo "SKIP_RELEASE=false" >> $GITHUB_ENV
           
           # Extract major, minor, patch from the latest tag (strip leading 'v')
           VERSION=${LATEST_TAG#v}
@@ -43,7 +43,7 @@ jobs:
           echo "Calculated new version: $NEW_VERSION"
 
       - name: Cancel Workflow
-        if: env.SKIP_RELEASE != 'true'
+        if: env.SKIP_RELEASE == 'true'
         run: exit 78
       
       # Create a new Git tag with the calculated version

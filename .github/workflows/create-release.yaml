@@ -37,6 +37,7 @@ jobs:
           LATEST_TAG=$(git describe --tags --abbrev=0 || echo "v0.0.0")  # Get latest tag or default to v0.0.0
           echo "LATEST_TAG=$LATEST_TAG" >> $GITHUB_ENV
           echo "Current latest tag is $LATEST_TAG"
+          exit 1
 
       - name: echo dotnet version
         run: |

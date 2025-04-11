@@ -1,0 +1,7 @@
+name: 'Build Action'
+description: 'Builds the application'
+runs:
+  using: 'composite'
+  steps:
+    - name: Build
+      run: echo "build"
